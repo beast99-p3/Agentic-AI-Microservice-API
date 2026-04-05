@@ -35,19 +35,19 @@ It is designed for ambiguous tasks where the agent must decide assumptions, deco
 ## Architecture
 
 ```mermaid
-flowchart TD
-    A[Client] --> B[FastAPI Routes]
-    B --> C[AgentRuntime]
-    C --> D[Prompt Composer]
-    C --> E[Guardrail Manager]
-    C --> F[Tool Registry]
-    C --> G[LLM Client Abstraction]
-    G --> H[OpenAI-compatible Provider]
-    F --> I[safe_math]
-    F --> J[text_utils]
-    F --> K[web_fetch_stub]
-    C --> L[Structured Agent Events]
-    L --> M[Agent run and stream outputs]
+graph TD
+  A[Client] --> B[API Routes]
+  B --> C[Agent Runtime]
+  C --> D[Prompt Builder]
+  C --> E[Guardrails]
+  C --> F[Tool Registry]
+  C --> G[LLM Adapter]
+  G --> H[Gemini OpenAI Compatible API]
+  F --> I[Safe Math]
+  F --> J[Text Utils]
+  F --> K[Web Fetch Stub]
+  C --> L[Execution Events]
+  L --> M[Run and Stream Responses]
 ```
 
 ## Project Structure
