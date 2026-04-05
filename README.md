@@ -47,11 +47,12 @@ flowchart TD
     F --> J[text_utils]
     F --> K[web_fetch_stub]
     C --> L[Structured Agent Events]
-    L --> M[/agent/run response + /agent/stream SSE]
+    L --> M[Agent run and stream outputs]
 ```
 
 ## Project Structure
 
+  ```text
 .
 ├── app/
 │   ├── api/
@@ -101,6 +102,7 @@ flowchart TD
 ├── README.md
 ├── pyproject.toml
 └── Makefile
+```
 
 ## API Endpoints
 
